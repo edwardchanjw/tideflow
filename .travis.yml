@@ -13,7 +13,7 @@ before_script:
   - export PATH=$HOME/.meteor:$PATH
   - npm install
 before_deploy:
-  - meteor build $RELEASE_NAME-$TRAVIS_TAG.tar.gz
+  - meteor build ../output/$RELEASE_NAME-$TRAVIS_TAG.tar.gz
 deploy:
   provider: releases
   skip_cleanup: true
