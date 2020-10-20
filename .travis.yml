@@ -13,14 +13,14 @@ before_script:
   - export PATH=$HOME/.meteor:$PATH
   - npm install
 before_deploy:
-  - meteor build ../output/$RELEASE_NAME-$TRAVIS_TAG.tar.gz
+  - meteor build ../output
 deploy:
   provider: releases
   skip_cleanup: true
   api_key:
       secure: "vKFjuLw9kt1g1hSBRh4rAz1nFsDV3+qGArBrNVo0PxhJzniRWPSL6caXpDYkagKB9th2Ma3ve1LpXvcZLuugRbqyMvOhx0SqSGmbllwGdHvUwetabbbfFaTzrmIIn2E/gdptCu6xq8FnLw3cl7sw7KingGnxKbuESgTDrkPXAYdhCclyfrWUC13KWdr+8kAF42jRJ8aACU29UK2RC67GazGIckdmQ8IMDKhgJSHkpS8+C1+GH6KvGUld8YVlYVn628W/JFVo9bLkrWFmAKx2lXeI00mwf+2W0A2znO9dodDQhj8VjCKfF1KW85OYtwWq0ZnHSh07bXNh8HOgE9n5cvDAhGS2QyweED6fv2ha71D4gixSq4NZxoXW2ZgwXlc/WreT6jnkChh/S2St1wgKiV9tXXs0ud33UeRYojPaTyYw6Q351nFaBt8v5ciNNWUD3LNy7K20hNVhc+wyCDGMJhnf5UURFZdrYZ1+hepnDhlbA3XPBw/dBthdig3Sluc0C0QOH0lFwgkA5dzfbcIJ9lx6x+6iGMOXenW+ACe6BUoWofW6yzBy3DEOLjsOj29Sd5VvPrbidRW3h0xAjIfcUXab7nzgozIydOwY8LwH9/S9Qc9kcrhw6TacHaiD6Le5q4x25mkFoJsq3Vf48OEePvQqAVuCCxzKJt4J1dKvt1A="
   file:
-    - ../output/$RELEASE_NAME-$TRAVIS_TAG.tar.gz
+    - ../output/tideflow.tar.gz
   on:
       #    repo: jcbagneris/travis-experimentation
     tags: true
